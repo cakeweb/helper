@@ -1,0 +1,16 @@
+{
+    "name": "cakeweb/iterator",
+    "description": "Implementação de loops avançados",
+    "type": "git",
+    "authors": [
+        {
+            "name": "CakeWeb",
+            "email": "contato@cakeweb.com.br"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "CakeWeb\\": "src/"
+        }
+    }
+}
