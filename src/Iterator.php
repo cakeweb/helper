@@ -31,4 +31,33 @@ class Iterator
 			}
 		}
 	}
+
+	public static function arrayClone($array)
+	{
+		return array_map(function($element) {
+			if(is_array($element))
+			{
+				return call_user_func(__FUNCTION__, $element);
+			}
+			elseif(is_object($element))
+			{
+				if($element instanceof \MongoDB\BSON\ObjectID)
+				{
+					return new \MongoDB\BSON\ObjectID((string)$element);
+				}
+				elseif($element instanceof \MongoDB\BSON\UTCDateTime)
+				{
+					return new \MongoDB\BSON\UTCDateTime((string)$element);
+				}
+				else
+				{
+					return clone $element;
+				}
+			}
+			else
+			{
+				return $element;
+			}
+		}, $array);
+	}
 }
