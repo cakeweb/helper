@@ -37,7 +37,7 @@ class Iterator
 		return array_map(function($element) {
 			if(is_array($element))
 			{
-				return call_user_func(__FUNCTION__, $element);
+				return self::arrayClone($element);
 			}
 			elseif(is_object($element))
 			{
