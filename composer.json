@@ -1,6 +1,6 @@
 {
-    "name": "cakeweb/iterator",
-    "description": "Implementação de loops avançados",
+    "name": "cakeweb/helper",
+    "description": "Funções para manipulação de tipos nativos do PHP",
     "type": "git",
     "authors": [
         {
